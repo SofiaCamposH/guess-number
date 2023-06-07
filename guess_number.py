@@ -9,4 +9,14 @@ def random_number():
     # Calculates a random number among the entered numbers.
     numer = random.randint(ran_one, ran_two) 
     points = 100#We start points at 100, because it is what it starts with and so that the cycle can start.
-    
+    while points > 0:#we open our first cycle, start comparing if points is greater than 0 you can continue.
+    #we ask the user to enter their first try
+        attempt = int(input("Try to guess the number, enter the number you think it is: "))
+        #If the first cycle is fulfilled, 
+        #it compares if the number entered by the user is correct, if it is correct, it continues.
+        if attempt == numer:
+            points += 10
+            #shows that it is correct and ends.
+            print("Congratulations you have discovered the number : ")
+            print("Game over")
+            break
