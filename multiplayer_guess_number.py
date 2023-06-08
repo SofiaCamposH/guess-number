@@ -7,3 +7,9 @@ while True:
    if player1 == player2:
     print("Congratulations,did you guess the number, you have: ",(player1points))
     break
+   else:
+     player1points -= 10 
+     print("you failed, now you have",(player1points))
+     if player1points == 0:
+       print("Sorry, you lost")
+       break
